@@ -5,10 +5,9 @@ The scenario of this project is similar to Dropbox:
 - The clients of the user are running on different hosts.
 - When any of client of the user uploads a file, the server has to transmit it to all other clients.
 - When a new client connects to the server, the server should transmit all the files, which have been uploaded by the other clients, to the new client immediately.
-- We will type `put <filename>` on different clients at the same time, and your programs have to deal with this case. 
 - If one of the clients is sleeping, the server should send the file data to other clients in a non-blocking way.
 - The uploading data only need to be sent to the clients that belong to the same user.
-- If the file uploaded by the client already exits(A file with the same file name already exists on the server), it must be replaced.
+- If the file uploaded by the client already exits(A file with the same file name already exists on the server), it will be replaced.
 
 ## Inputs
    1. `./server <port>`
